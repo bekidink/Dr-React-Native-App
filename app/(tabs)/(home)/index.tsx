@@ -1,8 +1,14 @@
 import WeeklyCalendar from "@/components/WeeklyCalander";
 import {
+  cardioBg,
+  dermatologyBg,
   Doctors,
   Favourite,
+  GeneralMedBg,
+  GyneologyBg,
   NotitficationIcon,
+  OdentologyBg,
+  OncologyBg,
   Pharmacy,
   Record,
   Search,
@@ -10,11 +16,39 @@ import {
   Speciality,
   UserIcon,
 } from "@/constants/images";
+import { useRouter } from "expo-router";
 import { useState } from "react";
-import { Image, Pressable, Text, View } from "react-native";
+import { FlatList, Image, Pressable, Text, View } from "react-native";
 import { Calendar, CalendarList, Agenda } from "react-native-calendars";
+const DATA = [
+  {
+    title: "Cardiology",
+    bg: cardioBg,
+  },
+  {
+    title: "Dermatology",
+    bg: dermatologyBg,
+  },
+  {
+    title: "General medicine",
+    bg: GeneralMedBg,
+  },
+  {
+    title: "Gynecology",
+    bg: GyneologyBg,
+  },
+  {
+    title: "Odontology",
+    bg: OdentologyBg,
+  },
+  {
+    title: "Oncology",
+    bg: OncologyBg,
+  },
+];
 export default function HomeScreen() {
   const [selected, setSelected] = useState("");
+  const navigation = useRouter();
   return (
     <View className="flex-1 bg-white px-8 py-5">
       <View className="flex-row justify-between items-center mt-5">
@@ -63,14 +97,41 @@ export default function HomeScreen() {
           <Text className="text-primary text-xs">Record</Text>
         </Pressable>
       </View>
-      <View className="flex bg-primary mt-4">
+      <View className="flex bg-primary mt-4 p-2 rounded-xl">
         <View className="flex-row items-center justify-between border-b border-[#E9F6FE] p-1">
           <Text className="text-xs text-white">Upcomming Schedule</Text>
           <Text className="text-xs text-white">Month</Text>
         </View>
-       <WeeklyCalendar/>
+        <WeeklyCalendar />
       </View>
-      
+      <View className="flex-row justify-between items-center my-5 pb-3 border-b border-[#E9F6FE]">
+        <Text className="text-primary text-lg">Specialities</Text>
+        <Pressable
+          onPress={() => navigation.navigate("/(tabs)/(home)/specialities" as never)}
+        >
+          <Text className="text-primary text-lg underline">See all</Text>
+        </Pressable>
+      </View>
+      <FlatList
+        data={DATA}
+        renderItem={({ item }) => (
+          <View className="flex-1 items-center bg-primary mx-2 py-2 rounded-xl justify-between">
+            <Image
+              source={item.bg}
+              style={{ width: 40, height: 30 }}
+              resizeMode="contain"
+            />
+            <Text className="text-white">{item.title}</Text>
+          </View>
+        )}
+        numColumns={3}
+        columnWrapperStyle={{
+          justifyContent: "space-between",
+          marginBottom: 10,
+          marginRight: 10,
+        }} // Adds spacing between rows
+        keyExtractor={(item, index) => index.toString()}
+      />
     </View>
   );
 }

@@ -15,7 +15,39 @@ const Doctors = require("../assets/images/Pharmacy.png");
 const Pharmacy = require("../assets/images/plea.png");
 const Speciality = require("../assets/images/Specialties.png");
 const Record = require("../assets/images/Record.png");
+const cardioBg = require("../assets/images/cardio.png");
+const dermatologyBg = require("../assets/images/dermatology.png");
+const GeneralMedBg = require("../assets/images/general-med.png");
+const GyneologyBg = require("../assets/images/gyneology.png");
+const OdentologyBg = require("../assets/images/odotology.png");
+const OncologyBg = require("../assets/images/oncology.png");
+const Doctor1Bg = require("../assets/images/Dr. Daniel.png");
+const Doctor2Bg = require("../assets/images/Doctor # 2.png");
+const Doctor3Bg = require("../assets/images/Doctor # 3.png");
+const Doctor4Bg = require("../assets/images/Doctor # 4.png");
+const BookingBg = require("../assets/images/Booking.png");
+const CallBg = require("../assets/images/call.png");
+const VideoBg = require("../assets/images/video.png");
+const QuestionBg = require("../assets/images/question.png");
+const ChatBg = require("../assets/images/msg.png");
+const HeartBg=require("../assets/images/heart-empt.png")
 export {
+  HeartBg,
+  ChatBg,
+  CallBg,
+  VideoBg,
+  QuestionBg,
+  BookingBg,
+  Doctor1Bg,
+  Doctor2Bg,
+  Doctor3Bg,
+  Doctor4Bg,
+  cardioBg,
+  dermatologyBg,
+  GeneralMedBg,
+  GyneologyBg,
+  OdentologyBg,
+  OncologyBg,
   Favourite,
   Doctors,
   Pharmacy,

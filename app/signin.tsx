@@ -36,7 +36,7 @@ const signin = () => {
         <View className="flex items-center mt-10">
           <Pressable
             className=" bg-primary px-16 py-2 rounded-full"
-            onPress={() => navigation.navigate("(home)" as never)}
+            onPress={() => navigation.navigate("(tabs)" as never)}
           >
             <Text className="text-white text-xl">Log In</Text>
           </Pressable>

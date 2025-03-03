@@ -23,9 +23,9 @@ const WeeklyCalendar = () => {
   };
 
   return (
-    <View className="py-2">
+    <View className="py-2 ">
       {/* Week Navigation */}
-      <View className="flex-row justify-between items-center mb-4">
+      <View className="flex-row justify-between items-center mb-4 ">
         <TouchableOpacity
           onPress={() =>
             setCurrentWeek(
@@ -82,6 +82,19 @@ const WeeklyCalendar = () => {
         }}
         hideExtraDays
       /> */}
+      <View className="flex border  border-[#E9F6FE] rounded-xl mx-3 p-1">
+        <View className="border-b border-[#E9F6FE] items-end p-1">
+          <Text className="text-white underline">See All</Text>
+        </View>
+        <View className="flex px-2 pb-2 border-b border-[#E9F6FE]">
+          <Text className="text-white">11 Month - Wednesday - Today</Text>
+          <Text className="text-white">10:00 am Dr. Olivia Turner</Text>
+        </View>
+        <View className="flex p-2 ">
+          <Text className="text-white">11 Month - Wednesday - Today</Text>
+          <Text className="text-white">10:00 am Dr. Olivia Turner</Text>
+        </View>
+      </View>
     </View>
   );
 };
