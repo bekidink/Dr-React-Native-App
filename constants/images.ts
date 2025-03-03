@@ -30,8 +30,12 @@ const CallBg = require("../assets/images/call.png");
 const VideoBg = require("../assets/images/video.png");
 const QuestionBg = require("../assets/images/question.png");
 const ChatBg = require("../assets/images/msg.png");
-const HeartBg=require("../assets/images/heart-empt.png")
+const HeartBg = require("../assets/images/heart-empt.png");
+const ScheduleBg = require("../assets/images/schedule.png");
+const BadgeBg = require("../assets/images/badge.png");
 export {
+  ScheduleBg,
+  BadgeBg,
   HeartBg,
   ChatBg,
   CallBg,

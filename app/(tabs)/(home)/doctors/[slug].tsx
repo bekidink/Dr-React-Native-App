@@ -10,6 +10,7 @@ import {
 import React, { useState } from "react";
 import { Stack, useLocalSearchParams, useRouter } from "expo-router";
 import {
+  BadgeBg,
   BookingBg,
   CallBg,
   ChatBg,
@@ -19,6 +20,7 @@ import {
   Doctor4Bg,
   HeartBg,
   QuestionBg,
+  ScheduleBg,
   Search,
   VideoBg,
 } from "@/constants/images";
@@ -105,21 +107,49 @@ const Speciality = () => {
             <Image source={HeartBg} height={20} width={20} />
           </Pressable>
         </View>
+        <View className="flex-row items-center"></View>
       </View>
-      <View className="bg-primary flex items-center py-5">
-        <Text className="text-white text-lg">Find Your Docter</Text>
-        <View className=" flex-row items-center px-2 bg-white h-10 rounded-full mt-3">
-          <Image source={Search} height={10} width={10} />
-          <TextInput
-            className="text-base p-2 w-64 text-gray-900"
-            placeholder="Search..."
-            placeholderTextColor="#00BBD3"
-            value={searchQuery}
-            onChangeText={handleSearch}
-          />
+      <View className="bg-primary flex  py-5">
+        <View className="flex-row ml-14">
+          <View className="w-20 h-16">
+            <Image
+              source={Doctor1Bg}
+              className="w-full h-full object-cover"
+              resizeMode="contain"
+            />
+          </View>
+          <View className="flex gap-y-1">
+            <Text className="text-white">Dr. Jacob Lopez, M.D.</Text>
+            <Text className="text-white">Surgical Dermatology</Text>
+            <View className="flex-row gap-x-4">
+              <Pressable className="flex-row rounded-xl px-2 items-center gap-x-2 bg-white">
+                <AntDesign name="star" size={14} color="#00BBD3" />
+                <Text>5</Text>
+              </Pressable>
+              <Pressable className="flex-row rounded-xl px-2 items-center gap-x-2 bg-white">
+                <Image source={ChatBg} />
+                <Text>5</Text>
+              </Pressable>
+            </View>
+          </View>
+        </View>
+        <View className=" relative -bottom-10 flex-row items-center px-10  h-10 mx-1 gap-x-3 rounded-full mt-3">
+          <View className="rounded-full flex-row items-center p-1 bg-white">
+            <Image source={BadgeBg} />
+            <View className="flex">
+              <Text className="text-xs">15 Years</Text>
+              <Text className="text-xs">experiences</Text>
+            </View>
+          </View>
+          <View className="rounded-full flex-row items-center p-3 bg-white">
+            <Image source={ScheduleBg} />
+            <View className="flex">
+              <Text className=" text-xs">Mon-Sat / 9:00AM - 5:00PM</Text>
+            </View>
+          </View>
         </View>
       </View>
-      <ScrollView className="flex-1 bg-white">
+      <ScrollView className="flex-1 mt-10 bg-white">
         <View className="flex-row justify-between mx-5 py-2 mb-2">
           <View className="flex-row items-center gap-x-3">
             <Text>Sort By</Text>
