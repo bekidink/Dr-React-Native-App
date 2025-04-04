@@ -22,7 +22,7 @@ import {
   OncologyBg,
   Search,
 } from "@/constants/images";
-import { useRouter } from "expo-router";
+import { Stack, useRouter } from "expo-router";
 const DATA = [
   {
     title: "Dr. Daniel Rodriguez",
@@ -45,6 +45,7 @@ const DATA = [
     bg: Doctor4Bg,
   },
 ];
+
 const index = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -53,8 +54,9 @@ const index = () => {
   };
   const navigation = useRouter();
   return (
-    <View className=" flex-1 ">
-      <View className="bg-primary flex items-center py-5">
+    <View className=" flex-1 bg-white">
+       
+      <View className="bg-primary flex items-center pt-10 pb-5">
         <Text className="text-white text-lg">Find Your Docter</Text>
         <View className=" flex-row items-center px-2 bg-white h-10 rounded-full mt-3">
           <Image source={Search} height={10} width={10} />
@@ -90,9 +92,7 @@ const index = () => {
           renderItem={({ item }) => (
             <Pressable
               onPress={() =>
-                navigation.navigate(
-                  `/(tabs)/(home)/doctors/${item.title}` as never
-                )
+                navigation.navigate(`/(tabs)/(chat)/${item.title}` as never)
               }
               className="flex-row   mx-5 my-3 py-2 px-7 rounded-xl "
             >

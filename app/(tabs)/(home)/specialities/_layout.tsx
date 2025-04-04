@@ -43,9 +43,9 @@ const _layout = () => {
                   <AntDesign name="left" size={24} color="white" />
                 </TouchableOpacity>
               </View>
-              <Text className="text-center text-white text-lg">
+              {/* <Text className="text-center text-white text-lg">
                 Specialties
-              </Text>
+              </Text> */}
             </View>
           ),
         })}

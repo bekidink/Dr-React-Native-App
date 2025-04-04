@@ -134,14 +134,14 @@ const Speciality = () => {
           </View>
         </View>
         <View className=" relative -bottom-10 flex-row items-center px-10  h-10 mx-1 gap-x-3 rounded-full mt-3">
-          <View className="rounded-full flex-row items-center p-1 bg-white">
+          <View className="rounded-full flex-row items-center p-1 bg-white border border-primary">
             <Image source={BadgeBg} />
             <View className="flex">
               <Text className="text-xs">15 Years</Text>
               <Text className="text-xs">experiences</Text>
             </View>
           </View>
-          <View className="rounded-full flex-row items-center p-3 bg-white">
+          <View className="rounded-full flex-row items-center p-3 bg-white border border-primary">
             <Image source={ScheduleBg} />
             <View className="flex">
               <Text className=" text-xs">Mon-Sat / 9:00AM - 5:00PM</Text>
@@ -150,48 +150,40 @@ const Speciality = () => {
         </View>
       </View>
       <ScrollView className="flex-1 mt-10 bg-white">
-        <View className="flex-row justify-between mx-5 py-2 mb-2">
-          <View className="flex-row items-center gap-x-3">
-            <Text>Sort By</Text>
-            <View className="bg-primary rounded-full py-1 px-2">
-              <Text className="text-white">A→Z</Text>
-            </View>
-            <Pressable className="rounded-full border border-primary py-1 px-2">
-              <Text className="text-primary">Filter</Text>
-            </Pressable>
-          </View>
-          <Text className="text-primary">Doctors</Text>
+        <View className="flex-row p-1  bg-[#E9F6FE] mx-5 rounded-xl">
+          <Text>Focus: </Text>
+          <Text className="mr-8 ">
+            The impact of hormonal imbalances on skin conditions, specializing
+            in acne, hirsutism, and other skin disorders.
+          </Text>
         </View>
-        <FlatList
-          data={DATA}
-          renderItem={({ item }) => (
-            <Pressable
-              onPress={() =>
-                navigation.navigate(
-                  `/(tabs)/(home)/specialities/${item.title}` as never
-                )
-              }
-              className="flex-row   mx-5 my-3 py-2 px-7 rounded-xl "
-            >
-              <Image
-                source={item.bg}
-                style={{ width: 100, height: 100 }}
-                resizeMode="contain"
-              />
-              <View className="flex gap-y-2 px-4">
-                <Text className="text-primary">{item.title}</Text>
-                <Text className="">{item.subtitle}</Text>
-                <View className="flex-row items-center justify-between">
-                  <Pressable className="border border-primary rounded-full px-3 py-1">
-                    <Text className="text-primary">Info</Text>
-                  </Pressable>
-                  <Image source={BookingBg} height={30} width={30} />
-                </View>
-              </View>
-            </Pressable>
-          )}
-          keyExtractor={(item, index) => index.toString()}
-        />
+        <View className="flex mx-5 mt-2">
+          <Text className="text-primary text-lg">Profile</Text>
+          <Text>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </Text>
+        </View>
+        <View className="flex mx-5 mt-2">
+          <Text className="text-primary text-lg">Career Path</Text>
+          <Text>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </Text>
+        </View>
+        <View className="flex mx-5 mt-2">
+          <Text className="text-primary text-lg">Highlights</Text>
+          <Text>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </Text>
+        </View>
       </ScrollView>
     </View>
   );

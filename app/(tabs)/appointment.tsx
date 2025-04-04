@@ -1,7 +1,12 @@
-import React from "react";
+import { View, Text } from 'react-native'
+import React from 'react'
 
-function appointment() {
-  return <div></div>;
+const appointment = () => {
+  return (
+    <View>
+      <Text>appointment</Text>
+    </View>
+  )
 }
 
-export default appointment;
+export default appointment

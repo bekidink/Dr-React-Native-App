@@ -54,19 +54,7 @@ const index = () => {
   const navigation = useRouter();
   return (
     <View className=" flex-1 ">
-      <View className="bg-primary flex items-center py-5">
-        <Text className="text-white text-lg">Find Your Docter</Text>
-        <View className=" flex-row items-center px-2 bg-white h-10 rounded-full mt-3">
-          <Image source={Search} height={10} width={10} />
-          <TextInput
-            className="text-base p-2 w-64 text-gray-900"
-            placeholder="Search..."
-            placeholderTextColor="#00BBD3"
-            value={searchQuery}
-            onChangeText={handleSearch}
-          />
-        </View>
-      </View>
+     
       <ScrollView className="flex-1 bg-white">
         <View className="flex-row justify-between mx-5 py-2 mb-2">
           <View className="flex-row items-center gap-x-3">
@@ -78,12 +66,12 @@ const index = () => {
               <Text className="text-primary">Filter</Text>
             </Pressable>
           </View>
-          <Pressable
+          {/* <Pressable
             className=""
             onPress={() => navigation.navigate("/(tabs)/(home)/rated" as never)}
           >
             <Text className="text-primary">Top Rating</Text>
-          </Pressable>
+          </Pressable> */}
         </View>
         <FlatList
           data={DATA}

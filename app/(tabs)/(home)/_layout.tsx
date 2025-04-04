@@ -11,10 +11,10 @@ export default function HomeLayout() {
       <Stack.Screen name="index" />
       <Stack.Screen name="specialities" />
       <Stack.Screen name="doctors" />
-      
-      {/* <Stack.Screen name="utility/index" /> */}
-      {/* <Stack.Screen name="beneficiaries/index" /> */}
-      {/* <Stack.Screen name="payMerchant/index" /> */}
+
+      <Stack.Screen name="rated" />
+      <Stack.Screen name="favourite" />
+      <Stack.Screen name="profile" />
     </Stack>
   );
 }

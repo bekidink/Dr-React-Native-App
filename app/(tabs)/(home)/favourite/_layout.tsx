@@ -10,7 +10,7 @@ const _layout = () => {
         name="index"
         options={({ navigation }) => ({
           headerShown: true,
-          title: "Doctors",
+          title: "Rating",
           headerTitleAlign: "center", // Centers the title
           headerTintColor: "white", // Makes text white
           headerStyle: { backgroundColor: "#00BBD3" },
@@ -21,14 +21,12 @@ const _layout = () => {
                   <AntDesign name="left" size={24} color="white" />
                 </TouchableOpacity>
               </View>
-              <Text className="text-center text-white text-lg">
-                Doctors
-              </Text>
+              <Text className="text-center text-white text-lg">Favourite</Text>
             </View>
           ),
         })}
       />
-      <Stack.Screen
+      {/* <Stack.Screen
         name="[slug]"
         options={({ navigation }) => ({
           headerShown: false,
@@ -49,7 +47,7 @@ const _layout = () => {
             </View>
           ),
         })}
-      />
+      /> */}
       {/* <Stack.Screen name="payment/index" />
       <Stack.Screen name="topup/index" />
       <Stack.Screen name="topup/contacts" options={{ presentation: "modal" }} />

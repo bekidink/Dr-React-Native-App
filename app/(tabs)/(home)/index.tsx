@@ -76,7 +76,12 @@ export default function HomeScreen() {
         <Text className="text-primary text-lg underline">See all</Text>
       </View>
       <View className="flex-row justify-between items-center mt-3">
-        <Pressable className="flex items-center">
+        <Pressable
+          className="flex items-center"
+          onPress={() =>
+            navigation.navigate("/(tabs)/(home)/favourite" as never)
+          }
+        >
           <Image source={Favourite} />
           <Text className="text-primary text-xs">Favourite</Text>
         </Pressable>
@@ -107,7 +112,9 @@ export default function HomeScreen() {
       <View className="flex-row justify-between items-center my-5 pb-3 border-b border-[#E9F6FE]">
         <Text className="text-primary text-lg">Specialities</Text>
         <Pressable
-          onPress={() => navigation.navigate("/(tabs)/(home)/specialities" as never)}
+          onPress={() =>
+            navigation.navigate("/(tabs)/(home)/specialities" as never)
+          }
         >
           <Text className="text-primary text-lg underline">See all</Text>
         </Pressable>
